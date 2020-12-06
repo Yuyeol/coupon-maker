@@ -94,7 +94,10 @@ class App extends Component {
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     // 전체 아이템 중 해당페이지의 아이템만 잘라줌
-    const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost);
+    // 최근작성이 위로 가도록 reverse()
+    const currentPosts = items
+      .reverse()
+      .slice(indexOfFirstPost, indexOfLastPost);
     return (
       <Container>
         <InputForm handleCreate={handleCreate} />
