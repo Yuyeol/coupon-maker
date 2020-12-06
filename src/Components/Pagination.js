@@ -21,7 +21,6 @@ const Pagination = ({ postsPerPage, itemNum, paginate }) => {
   for (let i = 1; i <= Math.ceil(itemNum / postsPerPage); i++) {
     pageNums.push(i);
   }
-  console.log(pageNums);
   return (
     <PageBlock>
       {pageNums.map((pageNum) => (

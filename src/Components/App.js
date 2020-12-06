@@ -87,7 +87,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state);
     const { handleCreate, paginate } = this;
     const { currentPage, postsPerPage, items } = this.state;
     // 페이지 계산공식
